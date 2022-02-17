@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+label {
+  font-weight: 600;
+  font-size: large;
+  color: aliceblue;
+  padding-bottom: 1rem;
+}
+
+input {
+  height: 2rem;
+  width: 18rem;
+}
