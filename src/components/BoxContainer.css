@@ -27,6 +27,25 @@
 }
 
 .box-child img {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
+}
+
+.img-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  padding: 0rem 0.5rem 1rem 0.5rem;
+  justify-content: space-between;
+}
+
+.img-button .btn {
+  background: transparent;
+  height: 25px;
+  width: 25px;
+  border: none;
+}
+
+.star-off {
+  filter: opacity(0.25) drop-shadow(0 0 0 rgb(225, 225, 231));
 }

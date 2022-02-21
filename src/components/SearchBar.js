@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './SearchBar.css';
 
 const SearchBar = props => {
-  const [query, setQuery] = useState('');
   const [timer, setTimer] = useState(null);
+  const inputValue = useRef();
 
   const inputChanged = e => {
-    setQuery(e.target.value);
-
     clearTimeout(timer);
 
     const newTimer = setTimeout(() => {
-      props.handleQuery(query);
+      props.handleQuery(inputValue.current.value);
     }, 500);
 
     setTimer(newTimer);
   };
-
   return (
     <div className="search-bar">
       <label>Search Crypto</label>
-      <input placeholder="Enter Cryptocurrency" onChange={inputChanged} />
+      <input
+        type="search"
+        placeholder="  Enter Cryptocurrency"
+        onChange={inputChanged}
+        ref={inputValue}
+      />
     </div>
   );
 };

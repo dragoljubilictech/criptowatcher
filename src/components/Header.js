@@ -11,7 +11,8 @@ const Header = () => {
 
   const handleUserLogin = props => {
     if (props) {
-      setUser(props);
+      setUser(props.name);
+      localStorage.setItem('userId', props.googleId);
       setShowUser(true);
       setShowLogin(false);
       setShowLogout(true);

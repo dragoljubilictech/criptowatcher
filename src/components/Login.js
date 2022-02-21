@@ -7,9 +7,8 @@ const clientId =
 function Login(props) {
   const onSuccess = res => {
     console.log('[Login Success] currentUser:', res.profileObj.name);
-    return res.profileObj.name
-      ? props.handleUserLogin(res.profileObj.name)
-      : null;
+
+    return res.profileObj.name ? props.handleUserLogin(res.profileObj) : null;
   };
 
   const onFailure = res => {
